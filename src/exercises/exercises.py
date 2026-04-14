@@ -16,7 +16,7 @@ from src.exercises.models import Student, Grade, Assignment
 # ===== BASIC CRUD =====
 
 def create_student(name: str, email: str) -> Student:
-    """TODO: Create and commit a Student; handle duplicate email.
+    """ Create and commit a Student; handle duplicate email.
 
     If email is duplicate:
       - rollback
@@ -34,7 +34,7 @@ def create_student(name: str, email: str) -> Student:
 
 
 def find_student_by_email(email: str) -> Optional[Student]:
-    """TODO: Return Student by email or None."""
+    """ Return Student by email or None."""
     return Student.query.filter_by(email=email).first()
 
 
