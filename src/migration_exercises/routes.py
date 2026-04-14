@@ -63,6 +63,11 @@ def create_assignment():
     parsed_date = None
     if due_date:
         parsed_date = date.fromisoformat(due_date)
+    if due_date:
+        try:
+            parsed_date = date.fromisoformat(due_date)
+        except ValueError:
+            return jsonify({"error": "date format invalid"}), 400
 
 
     if not title or max_score is None:
