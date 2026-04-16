@@ -62,8 +62,6 @@ def create_assignment():
     due_date = data.get("due_date")
     parsed_date = None
     if due_date:
-        parsed_date = date.fromisoformat(due_date)
-    if due_date:
         try:
             parsed_date = date.fromisoformat(due_date)
         except ValueError:
